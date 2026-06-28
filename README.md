@@ -69,4 +69,4 @@ The system demonstrates concepts relevant to Biomedical Engineering, clinical de
 
 ## Disclaimer
 
-This system is a prototype for research purposes. Clinical decisions must be made by qualified healthcare professionals.
+This system is a prototype for research purposes.
