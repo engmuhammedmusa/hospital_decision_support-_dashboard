@@ -1,0 +1,2 @@
+cd C:\Users\Muhammed\Documents\hospital_dashboard
+python -m streamlit run app.py

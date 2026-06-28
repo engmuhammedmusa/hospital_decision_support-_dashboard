@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+:root {
+  --primary: #2563EB;
+  --warning: #D97706;
+  --danger: #DC2626;
+  --success: #16A34A;
+  --background: #FAFAF9;
+  --surface: #FFFFFF;
+  --sidebar: #F7F7F5;
+  --border: #E7E5E4;
+  --muted: #6B7280;
+  --text: #1C1917;
+}
+
+html, body, [class*="css"] {
+  font-family: Lato, Arial, sans-serif !important;
+  font-weight: 400;
+}
+
+html,
+body,
+.stApp,
+[data-testid="stAppViewContainer"],
+[data-testid="stHeader"],
+[data-testid="stToolbar"],
+[data-testid="stDecoration"],
+[data-testid="stMain"],
+[data-testid="stMainBlockContainer"] {
+  background: var(--background) !important;
+  color: var(--text) !important;
+  font-family: Lato, Arial, sans-serif !important;
+  font-weight: 400;
+}
+
+strong,
+b,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+[data-testid="stMetricLabel"],
+[data-testid="stMetricValue"],
+[data-testid="stSidebarNav"] a[aria-current="page"] {
+  font-weight: 700 !important;
+}
+
+p,
+span:not([data-testid="stIconMaterial"]),
+label,
+div:not([data-testid="stIconMaterial"]),
+button,
+input,
+textarea,
+select,
+th,
+td,
+a {
+  font-family: Lato, Arial, sans-serif !important;
+}
+
+[data-testid="stIconMaterial"] {
+  font-family: "Material Symbols Rounded", "Material Symbols Outlined", "Material Icons" !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  font-size: 24px !important;
+  line-height: 1 !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  white-space: nowrap !important;
+  word-wrap: normal !important;
+  direction: ltr !important;
+  -webkit-font-feature-settings: "liga" !important;
+  -webkit-font-smoothing: antialiased !important;
+  font-feature-settings: "liga" !important;
+}
+
+button[data-testid="stBaseButton-headerNoPadding"] [data-testid="stIconMaterial"],
+button[data-testid="stExpandSidebarButton"] [data-testid="stIconMaterial"] {
+  font-size: 0 !important;
+  position: relative;
+}
+
+button[data-testid="stBaseButton-headerNoPadding"] [data-testid="stIconMaterial"]::before,
+button[data-testid="stExpandSidebarButton"] [data-testid="stIconMaterial"]::before {
+  color: var(--text);
+  display: inline-flex;
+  font-family: Lato, Arial, sans-serif !important;
+  font-size: 22px;
+  font-weight: 700;
+  height: 24px;
+  line-height: 1;
+  width: 24px;
+}
+
+button[data-testid="stBaseButton-headerNoPadding"] [data-testid="stIconMaterial"]::before {
+  content: "\00AB";
+}
+
+button[data-testid="stExpandSidebarButton"] [data-testid="stIconMaterial"]::before {
+  content: "\00BB";
+}
+
+svg,
+svg * {
+  font-family: initial !important;
+}
+
+.stApp {
+  background: var(--background) !important;
+  color: var(--text);
+}
+
+[data-testid="stSidebar"] {
+  background: var(--sidebar) !important;
+  border-right: 1px solid var(--border);
+  box-shadow: 8px 0 24px rgba(28, 25, 23, 0.03);
+}
+
+[data-testid="stSidebar"] * {
+  color: var(--text);
+}
+
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] p,
+[data-testid="stSidebar"] [data-testid="stCaptionContainer"] {
+  color: var(--muted) !important;
+}
+
+[data-testid="stSidebar"] > div {
+  padding-top: 20px;
+}
+
+[data-testid="stSidebar"] h2 {
+  color: var(--text);
+  font-size: 1.25rem;
+  letter-spacing: 0;
+  font-weight: 700 !important;
+}
+
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] .stCaptionContainer {
+  color: var(--muted);
+}
+
+[data-testid="stSidebar"] hr {
+  border-color: var(--border);
+  margin: 18px 0;
+}
+
+[data-testid="stSidebarNav"] {
+  background: transparent;
+  padding-top: 10px;
+}
+
+[data-testid="stSidebarNav"] ul {
+  gap: 3px;
+}
+
+[data-testid="stSidebarNav"] a {
+  border-radius: 6px;
+  color: #44403C;
+  font-weight: 400;
+  margin: 2px 8px;
+  min-height: 36px;
+  overflow: hidden;
+  transition: background 140ms ease, color 140ms ease;
+}
+
+[data-testid="stSidebarNav"] [data-testid="stMarkdownContainer"] {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+[data-testid="stSidebarNav"] [data-testid="stSidebarNavLink"]:first-of-type [data-testid="stMarkdownContainer"] p {
+  text-transform: capitalize;
+}
+
+[data-testid="stSidebarNav"] a:hover {
+  background: #ECEAE7;
+  color: var(--text);
+}
+
+[data-testid="stSidebarNav"] a[aria-current="page"] {
+  background: #EDEBE7;
+  color: var(--text);
+  font-weight: 700;
+}
+
+[data-testid="stMetric"] {
+  background: var(--surface) !important;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(28, 25, 23, 0.05);
+  padding: 16px;
+}
+
+.hero-panel {
+  background: var(--surface) !important;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 12px 32px rgba(28, 25, 23, 0.05);
+  padding: 24px;
+  margin-bottom: 18px;
+}
+
+.hero-panel h1 {
+  color: var(--text);
+  letter-spacing: 0;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--success);
+  margin-right: 8px;
+}
+
+.risk-badge {
+  color: #FFFFFF;
+  border-radius: 999px;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 10px;
+}
+
+.risk-high {
+  background: var(--danger);
+}
+
+.risk-medium {
+  background: var(--warning);
+}
+
+.risk-low {
+  background: var(--success);
+}
+
+div[data-testid="stDataFrame"] {
+  background: var(--surface) !important;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+[data-testid="stDataFrame"] * {
+  color: var(--text);
+}
+
+input,
+textarea,
+select,
+[role="combobox"],
+[data-baseweb="select"] > div,
+[data-baseweb="slider"] {
+  background: var(--surface) !important;
+  color: var(--text) !important;
+}
+
+[data-baseweb="select"] > div {
+  padding-left: 6px !important;
+}
+
+[data-baseweb="tag"][aria-label^="High Risk"] {
+  background: var(--danger) !important;
+  border-color: var(--danger) !important;
+}
+
+[data-baseweb="tag"][aria-label^="Medium Risk"] {
+  background: var(--warning) !important;
+  border-color: var(--warning) !important;
+}
+
+[data-baseweb="tag"][aria-label^="Low Risk"] {
+  background: var(--success) !important;
+  border-color: var(--success) !important;
+}
+
+[data-baseweb="tag"][aria-label^="High Risk"] *,
+[data-baseweb="tag"][aria-label^="Medium Risk"] *,
+[data-baseweb="tag"][aria-label^="Low Risk"] * {
+  color: #FFFFFF !important;
+  fill: #FFFFFF !important;
+}
+
+[data-baseweb="tag"] {
+  align-items: center !important;
+  margin-left: 0 !important;
+  max-width: 100% !important;
+}
+
+[data-baseweb="tag"] [title] {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+.js-plotly-plot,
+.js-plotly-plot * {
+  font-family: Lato, Arial, sans-serif !important;
+}
+
+section.main table tbody tr:hover {
+  background: #F1F0ED;
+}
+
+.small-note {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 768px) {
+  [data-testid="stMetric"] {
+    padding: 12px;
+  }
+
+  .hero-panel {
+    padding: 16px;
+  }
+}
